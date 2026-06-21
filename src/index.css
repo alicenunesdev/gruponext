@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-950: #2E1065;
+  --color-brand-900: #4C1D95;
+  --color-brand-800: #5B21B6;
+  --color-brand-700: #6D28D9;
+  --color-brand-600: #7C3AED;
+  --color-brand-500: #8B5CF6;
+  --color-brand-400: #A78BFA;
+  --color-brand-300: #C4B5FD;
+  --color-brand-200: #DDD6FE;
+  --color-brand-100: #EDE9FE;
+  --color-brand-50: #F5F3FF;
+  --color-accent: #F97316;
+  --color-accent-hover: #EA580C;
+  --color-orange-400: #FB923C;
+  --color-orange-500: #F97316;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply m-0 p-0 font-sans antialiased text-gray-700 bg-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  ::selection {
+    background-color: rgba(139, 92, 246, 0.2);
+    color: #4C1D95;
+  }
+  * {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  .section-padding {
+    @apply py-16 sm:py-20 lg:py-24;
+  }
+  .glass {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .glass-dark {
+    background: rgba(76, 29, 149, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(139, 92, 246, 0.15);
+  }
+}
